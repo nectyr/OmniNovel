@@ -1,7 +1,7 @@
 <?php
-Route::get('/', function () {
-    return view('auth.login');
-})->name('welcome')->middleware('guest');
+#Route::get('/', function () {
+#    return view('auth.login');
+#})->name('welcome')->middleware('guest');
 
 $guestRoutes = [
     'pricing',
@@ -23,7 +23,7 @@ $guestRoutes = [
     'ui-vector-maps',
 ];
 
-foreach ($guestRoutes as $route) 
+foreach ($guestRoutes as $route)
 {
     Route::get('/' . $route, function() use ($route) {
         return view("flowdash::{$route}");

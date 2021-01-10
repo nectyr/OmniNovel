@@ -8,10 +8,6 @@
 
 @section('content')
 
-    <div id="test">
-        <example-component></example-component>
-    </div>
-
     <div class="{{ $containerClass ?? 'container' }} page__container">
         <div class="row card-group-row">
             <div class="col-lg-4 col-md-6 card-group-row__col">
@@ -944,6 +940,4 @@
     <script src="{{ mix('js/page.dashboard.js') }}" defer></script>
     <script src="{{ mix('js/progress-charts.js') }}" defer></script>
 
-
-    <script src="{{ mix('js/test.js') }}" defer></script>
 @endsection

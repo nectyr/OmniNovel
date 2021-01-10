@@ -14,9 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return  'Website';
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+/** Routes Requiring Authentication */
+Route::middleware(['auth'])->group(function () {
+
+    /** Main Page Routes */
+    Route::get('/dashboard', '\App\Http\Controllers\HomeController@index')->name('dashboard');
+    Route::get('/books', '\App\Http\Controllers\BookController@index')->name('books');
+    Route::get('/chapters', '\App\Http\Controllers\ChapterController@index')->name('chapters');
+    Route::get('/characters', '\App\Http\Controllers\CharacterController@index')->name('characters');
+    Route::get('/scenes', '\App\Http\Controllers\SceneController@index')->name('scenes');
+    Route::get('/wiki', '\App\Http\Controllers\WikiController@index')->name('wiki');
+    Route::get('/collaborators', '\App\Http\Controllers\CollaboratorController@index')->name('collaborators');
+
+    /** User Related Routes */
+    Route::get('/user/show', '\App\Http\Controllers\UserController@show')->name('user.show');
+
+
+});

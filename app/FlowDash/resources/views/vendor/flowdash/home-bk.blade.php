@@ -7,32 +7,33 @@
 ])
 
 @section('content')
+
 @php
 $chat = [[
   'avatar' => "/vendor/flowdash/images/256_rsz_1andy-lee-642320-unsplash.jpg",
-  'name' => "Jenell D. Matney", 
+  'name' => "Jenell D. Matney",
   'date' => "4 days ago"
 ], [
   'avatar' => "/vendor/flowdash/images/256_daniel-gaffey-1060698-unsplash.jpg",
-  'name' => "Sherri J. Cardenas", 
+  'name' => "Sherri J. Cardenas",
   'date' => "3 days ago"
 ], [
   'avatar' => "/vendor/flowdash/images/256_jeremy-banks-798787-unsplash.jpg",
-  'name' => "Joseph S. Ferland", 
+  'name' => "Joseph S. Ferland",
   'date' => "2 days ago"
 ], [
   'avatar' => "/vendor/flowdash/images/256_joao-silas-636453-unsplash.jpg",
-  'name' => "Bryan K. Davis", 
+  'name' => "Bryan K. Davis",
   'date' => "1 day ago"
 ], [
   'avatar' => "/vendor/flowdash/images/256_luke-porter-261779-unsplash.jpg",
-  'name' => "Elizabeth J. Ohara", 
+  'name' => "Elizabeth J. Ohara",
   'date' => "4 hours ago"
 ], [
   'avatar' => "/vendor/flowdash/images/256_michael-dam-258165-unsplash.jpg",
-  'name' => "Kaci M. Langston", 
+  'name' => "Kaci M. Langston",
   'date' => "just now"
-]] 
+]]
 @endphp
 
 <div class="{{ $containerClass ?? 'container' }} page__container">
@@ -50,7 +51,7 @@ $chat = [[
           <div class="text-stats text-success">31.5% <i class="material-icons">arrow_upward</i></div>
         </div>
         <div><i class="material-icons icon-muted icon-40pt ml-3">gps_fixed</i></div>
-      </div>  
+      </div>
     </div>
     <div class="col-lg-4 col-md-6 card-group-row__col">
       <div class="card card-group-row__card card-body card-body-x-lg flex-row align-items-center">
@@ -79,35 +80,35 @@ $chat = [[
       <div class="card dashboard-area-tabs" id="dashboard-area-tabs">
         <div class="card-header p-0 bg-white nav">
           <div class="row no-gutters flex" role="tablist">
-            <div 
-              class="col" 
-              data-toggle="chart" 
-              data-target="#earningsTrafficChart" 
-              data-update='{"data":{"datasets":[{"label": "Traffic", "data":[10,2,5,15,10,12,15,25,22,30,25,40]}]}}' 
-              data-prefix="" 
+            <div
+              class="col"
+              data-toggle="chart"
+              data-target="#earningsTrafficChart"
+              data-update='{"data":{"datasets":[{"label": "Traffic", "data":[10,2,5,15,10,12,15,25,22,30,25,40]}]}}'
+              data-prefix=""
               data-suffix="k">
-              <a 
-                href="#" 
-                data-toggle="tab" 
-                role="tab" 
-                aria-selected="true" 
+              <a
+                href="#"
+                data-toggle="tab"
+                role="tab"
+                aria-selected="true"
                 class="dashboard-area-tabs__tab card-body text-center active">
                 <span class="card-header__title m-0">Sessions</span>
                 <span class="text-amount">18,391</span>
               </a>
             </div>
-            <div 
-              class="col border-left" 
-              data-toggle="chart" 
-              data-target="#earningsTrafficChart" 
-              data-update='{"data":{"datasets":[{"label": "Earnings", "data":[7,35,12,27,34,17,19,30,28,32,24,39]}]}}' 
-              data-prefix="$" 
+            <div
+              class="col border-left"
+              data-toggle="chart"
+              data-target="#earningsTrafficChart"
+              data-update='{"data":{"datasets":[{"label": "Earnings", "data":[7,35,12,27,34,17,19,30,28,32,24,39]}]}}'
+              data-prefix="$"
               data-suffix="k">
-              <a 
-                href="#" 
-                data-toggle="tab" 
-                role="tab" 
-                aria-selected="false" 
+              <a
+                href="#"
+                data-toggle="tab"
+                role="tab"
+                aria-selected="false"
                 class="dashboard-area-tabs__tab card-body text-center">
                 <span class="card-header__title m-0">Orders</span>
                 <span class="text-amount">&dollar;8,942</span>
@@ -143,8 +144,8 @@ $chat = [[
         <div class="card-body">
           <div
             id="vector-map-revenue"
-            class="map mb-3"  
-            data-toggle="vector-map" 
+            class="map mb-3"
+            data-toggle="vector-map"
             data-vector-map-map="world_en"
             data-vector-map-show-tooltip="false"
             data-vector-map-enable-zoom="true"
@@ -157,15 +158,15 @@ $chat = [[
           </div>
 
           <ul class="list-unstyled dashboard-location-tabs nav flex-column m-0" role="tablist">
-            <li 
-              data-toggle="vector-map-focus" 
-              data-target="#vector-map-revenue" 
-              data-focus="us" 
+            <li
+              data-toggle="vector-map-focus"
+              data-target="#vector-map-revenue"
+              data-focus="us"
               data-animate="true">
-              <div 
-                class="dashboard-location-tabs__tab active" 
-                data-toggle="tab" 
-                role="tab" 
+              <div
+                class="dashboard-location-tabs__tab active"
+                data-toggle="tab"
+                role="tab"
                 aria-selected="true">
                 <div><strong>New York</strong></div>
                 <div class="d-flex align-items-center">
@@ -178,15 +179,15 @@ $chat = [[
                 </div>
               </div>
             </li>
-            <li 
-              data-toggle="vector-map-focus" 
-              data-target="#vector-map-revenue" 
-              data-focus="it" 
+            <li
+              data-toggle="vector-map-focus"
+              data-target="#vector-map-revenue"
+              data-focus="it"
               data-animate="true">
-              <div 
-                class="dashboard-location-tabs__tab" 
-                data-toggle="tab" 
-                role="tab" 
+              <div
+                class="dashboard-location-tabs__tab"
+                data-toggle="tab"
+                role="tab"
                 aria-selected="true">
                 <div><strong>Vatican City</strong></div>
                 <div class="d-flex align-items-center">
@@ -199,15 +200,15 @@ $chat = [[
                 </div>
               </div>
             </li>
-            <li 
-              data-toggle="vector-map-focus" 
-              data-target="#vector-map-revenue" 
-              data-focus="au" 
+            <li
+              data-toggle="vector-map-focus"
+              data-target="#vector-map-revenue"
+              data-focus="au"
               data-animate="true">
-              <div 
-                class="dashboard-location-tabs__tab" 
-                data-toggle="tab" 
-                role="tab" 
+              <div
+                class="dashboard-location-tabs__tab"
+                data-toggle="tab"
+                role="tab"
                 aria-selected="true">
                 <div><strong>Sydney</strong></div>
                 <div class="d-flex align-items-center">
@@ -232,11 +233,11 @@ $chat = [[
         <div class="card-header card-header-large bg-white d-flex align-items-center">
           <h4 class="card-header__title flex m-0">Recent Activity</h4>
           <div
-            data-toggle="flatpickr" 
+            data-toggle="flatpickr"
             data-flatpickr-wrap="true"
-            data-flatpickr-static="true" 
-            data-flatpickr-mode="range" 
-            data-flatpickr-alt-format="d/m/Y" 
+            data-flatpickr-static="true"
+            data-flatpickr-mode="range"
+            data-flatpickr-alt-format="d/m/Y"
             data-flatpickr-date-format="d/m/Y">
             <a href="javascript:void(0)" class="link-date" data-toggle>13/03/2018 <span class="text-muted mx-1">to</span> 20/03/2018</a>
             <input class="d-none" type="hidden" value="13/03/2018 to 20/03/2018" data-input>
@@ -250,7 +251,7 @@ $chat = [[
         </div>
         <div class="list-group tab-content list-group-flush">
           <div class="tab-pane active show fade" id="activity_all">
-            @php 
+            @php
             $list_items = [[
               'avatar' => "/vendor/flowdash/images/256_rsz_1andy-lee-642320-unsplash.jpg",
               'name' => "Jenell D. Matney",
@@ -261,7 +262,7 @@ $chat = [[
               'message' => "Confirmation required for design"
             ], [
               'avatar' => "/vendor/flowdash/images/256_daniel-gaffey-1060698-unsplash.jpg",
-              'name' => "Sherri J. Cardenas", 
+              'name' => "Sherri J. Cardenas",
               'date' => "3 days ago",
               'amount' => "$612",
               'icon' => "email",
@@ -269,7 +270,7 @@ $chat = [[
               'message' => "Improve spacings on Projects page"
             ], [
               'avatar' => "/vendor/flowdash/images/256_jeremy-banks-798787-unsplash.jpg",
-              'name' => "Joseph S. Ferland", 
+              'name' => "Joseph S. Ferland",
               'date' => "2 days ago",
               'amount' => "$244",
               'icon' => "monetization_on",
@@ -277,7 +278,7 @@ $chat = [[
               'message' => "You unlocked a new Badge"
             ], [
               'avatar' => "/vendor/flowdash/images/256_joao-silas-636453-unsplash.jpg",
-              'name' => "Bryan K. Davis", 
+              'name' => "Bryan K. Davis",
               'date' => "1 day ago",
               'amount' => "$664",
               'icon' => "monetization_on",
@@ -285,13 +286,13 @@ $chat = [[
               'message' => "Meeting on Friday"
             ], [
               'avatar' => "/vendor/flowdash/images/256_michael-dam-258165-unsplash.jpg",
-              'name' => "Kaci M. Langston", 
+              'name' => "Kaci M. Langston",
               'date' => "just now",
               'amount' => "$631",
               'icon' => "description",
               'icon_bg' => "",
               'message' => "Design a new Brochure"
-            ]] 
+            ]]
             @endphp
 
             @foreach([0,1,2,3,4] as $i)
@@ -301,13 +302,13 @@ $chat = [[
                   <i class="material-icons">{{ $list_items[$i]['icon'] }}</i>
                 </span>
               </div>
-              
+
               <div class="flex">
                 <div class="d-flex align-items-middle">
                   <div class="avatar avatar-xxs mr-1">
                       <img src="{{ $chat[$i]['avatar'] }}" alt="Avatar" class="avatar-img rounded-circle">
                   </div>
-                
+
               @if($i == 1)
                   <strong class="text-15pt mr-1">{{ $list_items[$i]['name'] }}</strong>
                 </div>
@@ -315,7 +316,7 @@ $chat = [[
               </div>
               <small class="text-muted">{{ $list_items[$i]['date'] }}</small>
               @else
-                  <strong class="text-15pt mr-1">{{ $list_items[$i]['name'] }}</strong>    
+                  <strong class="text-15pt mr-1">{{ $list_items[$i]['name'] }}</strong>
                 </div>
                 <small class="text-muted">{{ $list_items[$i]['date'] }}</small>
               </div>
@@ -337,14 +338,14 @@ $chat = [[
                   <i class="material-icons">monetization_on</i>
                 </span>
               </div>
-              
+
               <div class="flex">
                 <div class="d-flex align-items-middle">
                   <div class="avatar avatar-xxs mr-1">
                       <img src="{{ $list_items[$i]['avatar'] }}" alt="Avatar" class="avatar-img rounded-circle">
                   </div>
                   <strong class="text-15pt mr-1">{{ $list_items[$i]['name'] }}</strong>
-                  
+
                 </div>
                 <small class="text-muted">{{ $list_items[$i]['date'] }}</small>
               </div>
@@ -361,14 +362,14 @@ $chat = [[
                   <i class="material-icons">email</i>
                 </span>
               </div>
-              
+
               <div class="flex">
                 <div class="d-flex align-items-middle">
                   <div class="avatar avatar-xxs mr-1">
                       <img src="{{ $chat[$i]['avatar'] }}" alt="Avatar" class="avatar-img rounded-circle">
                   </div>
                   <strong class="text-15pt mr-1">{{ $list_items[$i]['name'] }}</strong>
-                  
+
                 </div>
                 <small>{{ $list_items[$i]['message'] }}</small>
               </div>
@@ -410,48 +411,48 @@ $chat = [[
           <i class="material-icons icon-muted ml-3">expand_more</i>
         </div>
         <div class="card-header card-header-tabs-basic nav justify-content-center" role="tablist">
-          <div 
-            data-toggle="chart" 
-            data-target="#locationDoughnutChart" 
+          <div
+            data-toggle="chart"
+            data-target="#locationDoughnutChart"
             data-update='{"data":{
-              "labels": ["United States", "United Kingdom", "Germany", "India"], 
+              "labels": ["United States", "United Kingdom", "Germany", "India"],
               "datasets": [{"label": "Traffic", "data":[25,25,15,35]}]
             }}'>
-              <a 
-                href="#" 
-                class="active" 
-                data-toggle="tab" 
-                role="tab" 
+              <a
+                href="#"
+                class="active"
+                data-toggle="tab"
+                role="tab"
                 aria-selected="true">
               Traffic
             </a>
           </div>
-          <div 
-            data-toggle="chart" 
-            data-target="#locationDoughnutChart" 
+          <div
+            data-toggle="chart"
+            data-target="#locationDoughnutChart"
             data-update='{"data":{
-              "labels": ["United States", "United Kingdom", "Germany", "India"], 
+              "labels": ["United States", "United Kingdom", "Germany", "India"],
               "datasets": [{"label": "Purchases", "data":[15,17,25,43]}]
             }}'>
-            <a 
-              href="#" 
-              data-toggle="tab" 
-              role="tab" 
+            <a
+              href="#"
+              data-toggle="tab"
+              role="tab"
               aria-selected="false">
               Purchases
             </a>
           </div>
-          <div 
-            data-toggle="chart" 
-            data-target="#locationDoughnutChart" 
+          <div
+            data-toggle="chart"
+            data-target="#locationDoughnutChart"
             data-update='{"data":{
-              "labels": ["United States", "United Kingdom", "Germany", "India"], 
+              "labels": ["United States", "United Kingdom", "Germany", "India"],
               "datasets": [{"label": "Quotes", "data":[53,17,25,5]}]
             }}'>
-            <a 
-              href="#" 
-              data-toggle="tab" 
-              role="tab" 
+            <a
+              href="#"
+              data-toggle="tab"
+              role="tab"
               aria-selected="false">
               Quotes
             </a>

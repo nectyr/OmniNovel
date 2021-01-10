@@ -8,6 +8,7 @@
   'new_button_label' => false
 ])
 
+
 @section('content')
 @php
 $pricing = [[

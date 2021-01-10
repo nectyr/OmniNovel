@@ -7,13 +7,12 @@
     <div class="layout-login__form bg-white" data-perfect-scrollbar>
         <div class="d-flex justify-content-center mt-2 mb-5 navbar-light">
             <a href="{{ url('/') }}" class="navbar-brand" style="min-width: 0">
-                <img class="navbar-brand-icon" src="/vendor/flowdash/images/stack-logo-blue.svg" width="25" alt="Stack">
-                <span>Stack</span>
+                <img class="navbar-brand-icon" src="{{ asset('storage/Logo_OmniNovel.png') }}" width="250" alt="OmniNovel">
             </a>
         </div>
 
         <h4 class="m-0">Sign up!</h4>
-        <p class="mb-5">Create an account with Stack</p>
+        <p class="mb-5">Create an account with OmniNovel</p>
 
         <form method="POST" action="{{ route('register') }}">
             @csrf

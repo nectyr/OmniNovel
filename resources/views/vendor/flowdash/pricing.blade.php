@@ -1,5 +1,5 @@
 @extends("flowdash::layouts.{$layout}", [
-  'title' => 'Pricing',
+  'title' => 'Pricing 2',
   'breadcrumb' => [[
     'title' => 'Pages'
   ], [

@@ -15,9 +15,23 @@
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
+import axios from "axios";
+
+export default {
+    data() {
+        return {
+            UserData: []
+        };
+    },
+    mounted() {
+        axios.get("/user")
+            .then(response => {
+                this.UserData = response.data.results
+            })
+            .catch(err => {
+                // Manage the state of the application if the request
+                // has failed
+            })
     }
+};
 </script>

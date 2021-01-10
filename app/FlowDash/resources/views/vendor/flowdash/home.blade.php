@@ -3,12 +3,18 @@
   'breadcrumb' => [[
     'title' => 'Dashboard'
   ]],
-  'new_button_label' => 'New Report'
+  'new_button_label' => false
 ])
 
 @section('content')
 
-<div class="{{ $containerClass ?? 'container' }} page__container">
+
+    <div id="test">
+        <example-component></example-component>
+    </div>
+
+
+    <div class="{{ $containerClass ?? 'container' }} page__container">
   <div class="row card-group-row">
     <div class="col-lg-4 col-md-6 card-group-row__col">
       <div class="card card-group-row__card">
@@ -41,7 +47,7 @@
             </canvas>
           </div>
         </div>
-      </div>  
+      </div>
     </div>
     <div class="col-lg-4 col-md-6 card-group-row__col">
       <div class="card card-group-row__card">
@@ -89,16 +95,16 @@
 
   <div class="row">
     <div class="col-lg-8">
-      
+
       <div class="card">
         <div class="card-header bg-white d-flex align-items-center">
           <h4 class="card-header__title flex m-0">Current Sales</h4>
           <div
-            data-toggle="flatpickr" 
+            data-toggle="flatpickr"
             data-flatpickr-wrap="true"
-            data-flatpickr-static="true" 
-            data-flatpickr-mode="range" 
-            data-flatpickr-alt-format="d/m/Y" 
+            data-flatpickr-static="true"
+            data-flatpickr-mode="range"
+            data-flatpickr-alt-format="d/m/Y"
             data-flatpickr-date-format="d/m/Y">
             <a href="javascript:void(0)" class="link-date" data-toggle>13/03/2018 <span class="text-muted mx-1">to</span> 20/03/2018</a>
             <input class="flatpickr-hidden-input" type="hidden" value="13/03/2018 to 20/03/2018" data-input>
@@ -149,7 +155,7 @@
         'progress_color' => 'warning'
       ]];
       @endphp
-      
+
       <div class="card">
         <div class="card-header bg-white">
           <h4 class="card-header__title m-0">History</h4>
@@ -192,7 +198,7 @@
             </canvas>
           </div>
         </div>
-      </div>  
+      </div>
     </div>
     <div class="col-lg-4 col-md-6 card-group-row__col">
       <div class="card card-group-row__card">
@@ -260,7 +266,7 @@
 
   <div class="row">
     <div class="col-lg-7">
-      
+
       @php
       $tasks = [[
         'description' => 'Add content on lessons',
@@ -345,55 +351,55 @@
 
     </div>
     <div class="col-lg-5">
-      
+
       <div class="card">
         <div class="card-header bg-white d-flex align-items-center">
           <h4 class="card-header__title flex m-0">Stats by Location</h4>
           <i class="material-icons icon-muted ml-3">expand_more</i>
         </div>
         <div class="card-header card-header-tabs-basic nav justify-content-center" role="tablist">
-          <div 
-            data-toggle="chart" 
-            data-target="#locationDoughnutChart" 
+          <div
+            data-toggle="chart"
+            data-target="#locationDoughnutChart"
             data-update='{"data":{
-              "labels": ["United States", "United Kingdom", "Germany", "India"], 
+              "labels": ["United States", "United Kingdom", "Germany", "India"],
               "datasets": [{"label": "Traffic", "data":[25,25,15,35]}]
             }}'>
-              <a 
-                href="#" 
-                class="active" 
-                data-toggle="tab" 
-                role="tab" 
+              <a
+                href="#"
+                class="active"
+                data-toggle="tab"
+                role="tab"
                 aria-selected="true">
               Traffic
             </a>
           </div>
-          <div 
-            data-toggle="chart" 
-            data-target="#locationDoughnutChart" 
+          <div
+            data-toggle="chart"
+            data-target="#locationDoughnutChart"
             data-update='{"data":{
-              "labels": ["United States", "United Kingdom", "Germany", "India"], 
+              "labels": ["United States", "United Kingdom", "Germany", "India"],
               "datasets": [{"label": "Purchases", "data":[15,17,25,43]}]
             }}'>
-            <a 
-              href="#" 
-              data-toggle="tab" 
-              role="tab" 
+            <a
+              href="#"
+              data-toggle="tab"
+              role="tab"
               aria-selected="false">
               Purchases
             </a>
           </div>
-          <div 
-            data-toggle="chart" 
-            data-target="#locationDoughnutChart" 
+          <div
+            data-toggle="chart"
+            data-target="#locationDoughnutChart"
             data-update='{"data":{
-              "labels": ["United States", "United Kingdom", "Germany", "India"], 
+              "labels": ["United States", "United Kingdom", "Germany", "India"],
               "datasets": [{"label": "Quotes", "data":[53,17,25,5]}]
             }}'>
-            <a 
-              href="#" 
-              data-toggle="tab" 
-              role="tab" 
+            <a
+              href="#"
+              data-toggle="tab"
+              role="tab"
               aria-selected="false">
               Quotes
             </a>
@@ -458,7 +464,7 @@
             <span class="d-flex align-items-center"><i class="material-icons text-success icon-16pt mr-1">arrow_upward</i> 15.8%</span>
           </small>
         </div>
-      </div>  
+      </div>
     </div>
     <div class="col-lg-4 col-md-6 card-group-row__col">
       <div class="card card-group-row__card">
@@ -623,7 +629,7 @@
     'image' => '/vendor/flowdash/images/posts/linkedin-sales-navigator-402873.jpg'
   ]];
   @endphp
-  
+
   <div class="card">
     <div class="card-header bg-white d-flex align-items-center justify-content-between">
       <h4 class="card-header__title mb-0">Latest Blog Posts</h4>
@@ -700,7 +706,7 @@
       </div>
     </div>
     <div class="col-lg-5">
-      
+
       <div class="card">
         <div class="card-header bg-white">
           <h4 class="card-header__title mb-0">Statistics</h4>
@@ -939,4 +945,8 @@
 <!-- Chart.js Samples -->
 <script src="{{ mix('js/page.dashboard.js') }}" defer></script>
 <script src="{{ mix('js/progress-charts.js') }}" defer></script>
+
+
+<script src="{{ mix('js/test.js') }}" defer></script>
+
 @endsection

@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{ config('flowdash.rtl') ? 'rtl' : 'ltr' }}">
 <head>
     @include('flowdash::partials.header')
+    <script src="{{ mix('/js/global.js') }}"></script>
 </head>
 
 @php
@@ -27,7 +28,7 @@
         <div id="header" class="mdk-header js-mdk-header m-0" data-fixed>
             <div class="mdk-header__content">
                 @if($navbar ?? true !== false)
-                    @include('flowdash::partials.navbar')
+                    @include('partials.navbar')
                 @endif
             </div>
         </div>
@@ -50,7 +51,7 @@
             </div>
             <!-- // END drawer-layout__content -->
 
-            @include("flowdash::partials.{$drawerFile}")
+            @include("partials.{$drawerFile}")
           </div>
           <!-- // END drawer-layout -->
 

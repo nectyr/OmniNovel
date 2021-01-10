@@ -14,7 +14,7 @@
     $components_menu = request()->routeIs(['ui-buttons', 'ui-alerts', 'ui-avatars', 'ui-modals', 'ui-charts', 'ui-icons', 'ui-forms', 'ui-range-sliders', 'ui-datetime', 'ui-tables', 'ui-tabs', 'ui-loaders', 'ui-drag', 'ui-pagination', 'ui-vector-maps']);
 @endphp
 
-<body class="layout-default {{ $bodyClass ?? '' }}">
+<body class="layout-default {{ $bodyClass ?? '' }}" >
 
     @include('flowdash::partials.preloader')
 
@@ -58,7 +58,7 @@
 
     </div>
     <!-- // END header-layout -->
-    
+
     {{-- @include('flowdash::partials.app-settings') --}}
 
     @include('flowdash::partials.footer')

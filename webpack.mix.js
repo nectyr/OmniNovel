@@ -69,7 +69,9 @@ mix
   .js('resources/js/vendor/flowdash/settings.js', 'public/js')
   .js('resources/js/vendor/flowdash/sidebar-mini.js', 'public/js')
   .js('resources/js/vendor/flowdash/toggle-check-all.js', 'public/js')
-  .js('resources/js/test.js', 'public/js')
+
+mix
+    .js('resources/js/global.js', 'public/js')
 
 mix
   .version()
