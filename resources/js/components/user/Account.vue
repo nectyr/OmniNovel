@@ -4,11 +4,11 @@
               <span class="mr-1 d-flex-inline">
                 <span class="text-light">{{ UserData.name }}</span>
               </span>
-            <img src="/vendor/flowdash/images/avatar/demi.png" class="rounded-circle" width="32" alt="Frontted">
+            <img src="/vendor/flowdash/images/avatar/demi.png" class="rounded-circle" width="32" alt="Frontted" />
         </a>
         <div id="account_menu" class="dropdown-menu dropdown-menu-right">
             <div class="dropdown-item-text dropdown-item-text--lh">
-                <div><strong>Adrian Demian</strong></div>
+                <div><strong>{{ UserData.name }}</strong></div>
                 <div class="text-muted">@adriandemian</div>
             </div>
             <div class="dropdown-divider"></div>
@@ -37,6 +37,7 @@
 import axios from "axios";
 
 export default {
+    name: "Account",
     data() {
         return {
             UserData: []
@@ -48,8 +49,7 @@ export default {
                 this.UserData = response.data
             })
             .catch(err => {
-                // Manage the state of the application if the request
-                // has failed
+                this.UserData.name = '???';
             })
     }
 };
