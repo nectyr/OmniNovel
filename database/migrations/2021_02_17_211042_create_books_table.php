@@ -17,7 +17,8 @@ class CreateBooksTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('title');
-            $table->string('subtitle');
+            $table->string('subtitle')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

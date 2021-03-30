@@ -2,32 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\FlowDash\Http\Middleware\SetDefaultLayoutForUrls;
-use App\Models\Book;
+use App\Models\UserState;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class BookController extends Controller
+class UserStateController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware(['auth', SetDefaultLayoutForUrls::class]);
-    }
-
-    /**
-     * Show the Full Default Web Page
-     *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
-     */
-    public function page() {
-        return view('pages/book');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -35,7 +15,9 @@ class BookController extends Controller
      */
     public function index()
     {
-        return response()->json(Auth::user()->books);
+        return response()->json(
+            Auth::user()->state
+        );
     }
 
     /**
@@ -56,16 +38,20 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        UserState::updateOrCreate([
+            'user_id' => Auth::user()->id,
+        ],
+            $request->all()
+        );
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Book  $book
+     * @param  \App\Models\UserState  $userState
      * @return \Illuminate\Http\Response
      */
-    public function show(Book $book)
+    public function show(UserState $userState)
     {
         //
     }
@@ -73,10 +59,10 @@ class BookController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Book  $book
+     * @param  \App\Models\UserState  $userState
      * @return \Illuminate\Http\Response
      */
-    public function edit(Book $book)
+    public function edit(UserState $userState)
     {
         //
     }
@@ -85,10 +71,10 @@ class BookController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Book  $book
+     * @param  \App\Models\UserState  $userState
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Book $book)
+    public function update(Request $request, UserState $userState)
     {
         //
     }
@@ -96,13 +82,11 @@ class BookController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Book  $book
+     * @param  \App\Models\UserState  $userState
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Book $book)
+    public function destroy(UserState $userState)
     {
         //
     }
-
-
 }

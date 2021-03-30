@@ -38,5 +38,15 @@ Route::middleware(['auth'])->group(function () {
     /** User Related Routes */
     Route::get('/user/show', '\App\Http\Controllers\UserController@show')->name('user.show');
 
+    /** User State **/
+    Route::get('/userState', '\App\Http\Controllers\UserStateController@index')->name('userstate');
+    Route::post('/userState/store', '\App\Http\Controllers\UserStateController@store')->name('userstate.store');
 
+
+
+
+    /**
+     * TESTING OUTPUT
+     */
+    Route::get('/test', '\App\Http\Controllers\HomeController@test')->name('test');
 });

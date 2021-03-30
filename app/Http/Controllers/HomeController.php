@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\FlowDash\Http\Middleware\SetDefaultLayoutForUrls;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,6 +25,23 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        return view('pages/dashboard');
     }
+
+
+
+
+
+
+
+
+
+    /**
+     * TESTING OUTPUT
+     */
+    public function test(Request $request) {
+        $user = Auth::user();
+        dd((new UserStateController)->index());
+    }
+
 }

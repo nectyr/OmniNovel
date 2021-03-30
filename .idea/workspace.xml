@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a9c6641-2c0c-45ed-ba1a-f031120e9f0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BookController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Book.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_17_211042_create_books_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/book/Selector.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BookController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_17_211042_create_books_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_02_17_211042_create_books_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/user/Account.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/user/Account.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/book/Selector.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/book/Selector.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/book.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/drawer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/drawer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -169,7 +165,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/partials" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -177,15 +173,19 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/pages" />
       <recent name="$PROJECT_DIR$/resources/views/partials" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -208,7 +208,8 @@
       <workItem from="1609619313507" duration="1008000" />
       <workItem from="1610229216313" duration="10013000" />
       <workItem from="1610915716486" duration="7230000" />
-      <workItem from="1613595593881" duration="6945000" />
+      <workItem from="1613595593881" duration="7623000" />
+      <workItem from="1617113828805" duration="8692000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1609020579455</created>
@@ -224,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610238591037</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updates for Books, layout fixes, and Vue Book Dropdown">
+      <created>1613602607244</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613602607244</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +251,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Updates for Layout and Vue enabled user header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates for Layout and Vue enabled user header" />
+    <MESSAGE value="Updates for Books, layout fixes, and Vue Book Dropdown" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates for Books, layout fixes, and Vue Book Dropdown" />
   </component>
 </project>

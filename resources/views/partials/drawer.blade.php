@@ -20,7 +20,7 @@
               </a>
           </li>
           <li class="sidebar-menu-item {{ activeClass('ui-buttons') }}">
-              <a class="sidebar-menu-button" href="{{ route('books') }}">
+              <a class="sidebar-menu-button" href="{{ route('book') }}">
                   <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">book</i>
                   <span class="sidebar-menu-text">Books</span>
               </a>
